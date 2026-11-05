@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="hr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Design | Profesionalni web dizajn i izrada web stranica</title>
+    
+    <!-- PRIMARY SEO META TAGS -->
+    <meta name="description" content="Mike Design - Vrhunski profesionalni web dizajn, izrada modernih web stranica, UI/UX rješenja i brending u Hrvatskoj i regiji. Zatražite svoju ponudu već danas!">
+    <meta name="keywords" content="web dizajn, izrada web stranica, Mike Design, Hrvatska, Zagreb, UI/UX dizajn, web studio, moderni web dizajn, digitalni marketing">
+    <meta name="author" content="Mihael - Mike Design">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <link rel="canonical" href="https://mikedesign.kesug.com">
+    <link rel="alternate" hreflang="hr" href="https://mikedesign.kesug.com">
+    <link rel="alternate" hreflang="x-default" href="https://mikedesign.kesug.com">
+
+    <!-- OPEN GRAPH / SOCIAL MEDIA PREVIEW (Telegram, Viber, WhatsApp, Facebook) -->
+    <meta property="og:locale" content="hr_HR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mike Design | Profesionalni web dizajn i razvoj">
+    <meta property="og:description" content="Magija boja i koda. Stvaranje web stranica koje oduševljavaju i donose rezultate.">
+    <meta property="og:url" content="https://mikedesign.kesug.com">
+    <meta property="og:site_name" content="Mike Design Studio">
+    <meta property="og:image" content="https://mikedesign.kesug.com/image/mike-design-og.png">
+    <meta property="og:image:secure_url" content="https://mikedesign.kesug.com/image/mike-design-og.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mike Design | Profesionalni web dizajn">
+    <meta name="twitter:description" content="Stvaranje vrhunskih digitalnih iskustava i modernih web stranica.">
+    <meta name="twitter:image" content="https://mikedesign.kesug.com/image/mike-design-og.png">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="https://mikedesign.kesug.com/image/mike-design-og.png">
+
+    <!-- JSON-LD SCHEMA STRUCTURED DATA (Google Indexing) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Mike Design",
+      "url": "https://mikedesign.kesug.com",
+      "image": "https://mikedesign.kesug.com/image/mike-design-og.png",
+      "logo": "https://mikedesign.kesug.com/image/mike-design-og.png",
+      "description": "Vrhunski profesionalni web dizajn, izrada modernih web stranica, UI/UX rješenja i brending u Hrvatskoj.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Zagreb",
+        "addressCountry": "HR"
+      },
+      "priceRange": "€€",
+      "telephone": "+380673626012",
+      "email": "mikedesignua@gmail.com"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="antialiased bg-slate-950 text-white">
+    <!-- Background visual assets -->
+    <div class="fixed top-0 left-0 w-full h-full -z-10 bg-slate-950 overflow-hidden">
+        <div class="blob bg-blue-600 top-[-10%] left-[-5%]"></div>
+        <div class="blob bg-fuchsia-600 bottom-[-10%] right-[-5%]"></div>
+        <div class="blob bg-cyan-500 top-[30%] right-[10%] opacity-20"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 w-full z-[100] glass border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Identical Logo Component (Header) -->
+                <a href="#home" class="logo-component flex items-center gap-3">
+                    <div class="logo-icon-wrapper">
+                        <div class="logo-border"></div>
+                        <div class="letter-container">
+                            <span class="char-m">M</span>
+                            <span class="char-k">K</span>
+                        </div>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-name">Mike</span>
+                        <span class="logo-subtext">Design</span>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex items-center">
+                    <div class="flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link px-2 py-1 text-sm font-semibold uppercase tracking-wider">Početna</a>
+                        <a href="#about" class="nav-link px-2 py-1 text-sm font-semibold uppercase tracking-wider">O meni</a>
+                        <a href="#portfolio" class="nav-link px-2 py-1 text-sm font-semibold uppercase tracking-wider">Portfolio</a>
+                        <a href="#services" class="nav-link px-2 py-1 text-sm font-semibold uppercase tracking-wider">Usluge</a>
+                        <a href="#process" class="nav-link px-2 py-1 text-sm font-semibold uppercase tracking-wider">Proces</a>
+                        <a href="#contact" class="nav-link px-2 py-1 text-sm font-semibold uppercase tracking-wider">Kontakt</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Navigation Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-white p-2 bg-white/5 rounded-xl border border-white/10" aria-label="Izbornik">
+                        <i class="fas fa-th-large text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Overlay Navigation -->
+    <div id="mobile-menu-overlay" class="md:hidden">
+        <button id="close-menu" class="absolute top-6 right-6 text-4xl text-white/50 hover:text-white" aria-label="Zatvori">&times;</button>
+        
+        <a href="#home" class="logo-component flex items-center gap-3 mb-10">
+            <div class="logo-icon-wrapper">
+                <div class="logo-border"></div>
+                <div class="letter-container">
+                    <span class="char-m">M</span>
+                    <span class="char-k">K</span>
+                </div>
+            </div>
+            <div class="logo-text">
+                <span class="logo-name">Mike</span>
+                <span class="logo-subtext">Design</span>
+            </div>
+        </a>
+
+        <a href="#home" class="mobile-nav-link">POČETNA</a>
+        <a href="#about" class="mobile-nav-link">O MENI</a>
+        <a href="#portfolio" class="mobile-nav-link">PORTFOLIO</a>
+        <a href="#services" class="mobile-nav-link">USLUGE</a>
+        <a href="#process" class="mobile-nav-link">PROCES</a>
+        <a href="#contact" class="mobile-nav-link">KONTAKT</a>
+
+        <div class="flex gap-6 mt-12">
+            <a href="https://wa.me/380673626012" class="w-12 h-12 glass rounded-xl flex items-center justify-center si-whatsapp text-[#25D366]"><i class="fab fa-whatsapp text-xl"></i></a>
+            <a href="viber://chat?number=%2B380673626012" class="w-12 h-12 glass rounded-xl flex items-center justify-center si-viber text-[#7360f2]"><i class="fab fa-viber text-xl"></i></a>
+            <a href="https://t.me/mastnet" class="w-12 h-12 glass rounded-xl flex items-center justify-center si-telegram text-[#0088cc]"><i class="fab fa-telegram-plane text-xl"></i></a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header id="home" class="min-h-screen flex items-center justify-center pt-24 pb-16 px-4 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/10 blur-[140px] rounded-full -z-10"></div>
+
+        <div class="text-center max-w-5xl z-10">
+            <div class="flex flex-col items-center justify-center gap-3 mb-6">
+                <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full glass border-cyan-500/30 text-cyan-400 text-xs font-bold uppercase tracking-widest shadow-[0_0_15px_rgba(6,182,212,0.2)] animate-bounce">
+                    <span>🚀</span>
+                    <span>Budućnost web dizajna je ovdje</span>
+                </div>
+
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-widest shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Dostupan za nove projekte</span>
+                </div>
+            </div>
+
+            <h1 class="text-5xl sm:text-7xl md:text-9xl font-black mb-6 leading-[0.9] tracking-tighter" id="h_title_el">
+                MAGIJA <br><span class="gradient-text uppercase">BOJA</span> I KODA
+            </h1>
+
+            <p class="text-gray-300 text-lg md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed font-light" id="h_desc_el">
+                Ne stvaram samo web stranice, već <span class="text-fuchsia-400 font-bold">vizualna iskustva</span> koja pomažu vašem poslovanju da zasja jače od konkurenata.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="#portfolio" class="group px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-black rounded-full hover:scale-105 transition-all shadow-[0_0_20px_rgba(6,182,212,0.5)] cursor-pointer">
+                    POGLEDAJ RADOVE <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition"></i>
+                </a>
+                <a href="#contact" class="px-10 py-5 glass border-white/20 text-white font-black rounded-full hover:bg-white hover:text-black transition-all hover-scale cursor-pointer">
+                    ZAPOČNI PROJEKT
+                </a>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-white/10 flex flex-wrap justify-center items-center gap-6 sm:gap-12 text-xs uppercase tracking-widest text-gray-400 font-semibold">
+                <span class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> UI/UX Standardi</span>
+                <span class="flex items-center gap-2"><i class="fas fa-check text-fuchsia-400"></i> Brza Izrada</span>
+                <span class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> SEO Optimizirano</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <section class="py-16 border-y border-white/10 bg-slate-900/50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <p class="text-4xl lg:text-5xl font-black text-cyan-400 mb-2">10+</p>
+                <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Uspješnih projekata</p>
+            </div>
+            <div>
+                <p class="text-4xl lg:text-5xl font-black text-fuchsia-400 mb-2">100%</p>
+                <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Zadovoljnih klijenata</p>
+            </div>
+            <div>
+                <p class="text-4xl lg:text-5xl font-black text-green-400 mb-2">2 Tjedna</p>
+                <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Prosječan rok izrade</p>
+            </div>
+            <div>
+                <p class="text-4xl lg:text-5xl font-black text-blue-400 mb-2">24/7</p>
+                <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Podrška i suradnja</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 lg:py-32 px-4 relative">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div class="relative group max-w-md mx-auto lg:max-w-none w-full">
+                <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500 to-fuchsia-600 rounded-3xl blur-2xl opacity-20 group-hover:opacity-40 transition"></div>
+                <div class="relative w-full aspect-square max-w-[420px] mx-auto glass rounded-3xl overflow-hidden border-2 border-white/10 flex items-center justify-center bg-slate-900/80 p-6">
+                    <img src="image/mike-design-og.png" alt="MIKE Design Logo" class="w-full h-full object-contain p-4 group-hover:scale-105 transition duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x600/020617/00a2ed?text=MIKE+Design';">
+                </div>
+            </div>
+            <div>
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-8 uppercase tracking-tight" id="a_title_el">Tko sam ja<span class="text-cyan-400">?</span></h2>
+                <p class="text-gray-400 mb-8 text-xl leading-relaxed italic">
+                    "Dizajn nije samo kako izgleda, već kako radi."
+                </p>
+                <p class="text-gray-300 mb-10 text-lg">
+                    Moje ime je Mihael. Spajam analitiku s kreativnim kaosom kako bih stvorio sučelja koja se osjećaju prirodno. Svaka boja na mojoj paleti ima svoju svrhu.
+                </p>
+                <div class="grid grid-cols-2 gap-4 mb-10">
+                    <div class="glass p-6 rounded-2xl border-l-4 border-cyan-500 card-cyan">
+                        <span class="text-3xl block mb-2">⚡</span>
+                        <h4 class="font-bold text-white uppercase">Brzi start</h4>
+                        <p class="text-xs text-gray-400">MVP za 2 tjedna bez gubitka kvalitete.</p>
+                    </div>
+                    <div class="glass p-6 rounded-2xl border-l-4 border-fuchsia-500 card-purple">
+                        <span class="text-3xl block mb-2">🎨</span>
+                        <h4 class="font-bold text-white uppercase">Brand Identity</h4>
+                        <p class="text-xs text-gray-400">Stvaranje nezaboravnog vizualnog stila brenda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section (Exactly 10 Blocks) -->
+    <section id="portfolio" class="py-24 lg:py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-16 uppercase tracking-tight">
+                <span class="text-cyan-400">.</span> <span>Portfolio</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <!-- Case 1: Glamour Zagreb -->
+                <a href="https://glamur.kesug.com" target="_blank" rel="noopener noreferrer" class="content-block group overflow-hidden block bg-slate-900/40 border border-slate-800 rounded-3xl transition-all duration-500 hover:border-cyan-400/30">
+                    <div class="aspect-video relative overflow-hidden bg-slate-900">
+                        <img src="image/glamour-zagreb.png" class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-1000 grayscale group-hover:grayscale-0" alt="Glamour Zagreb" onerror="this.onerror=null;this.src='https://placehold.co/600x400/020617/00a2ed?text=Glamour+Zagreb';">
+                    </div>
+                    <div class="p-10">
+                        <h4 class="text-white text-3xl font-extrabold mb-4 uppercase">Glamour Zagreb</h4>
+                        <p class="text-slate-400 text-sm mb-8 leading-relaxed font-light">Ekskluzivan dizajn za kozmetički studio u Zagrebu. Fokus na eleganciju i premium uslugu.</p>
+                        <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest">Projekt br. 1</span>
+                    </div>
+                </a>
+
+                <!-- Case 2: Teacher.Pro -->
+                <a href="https://teachergo.kesug.com" target="_blank" rel="noopener noreferrer" class="content-block group overflow-hidden block bg-slate-900/40 border border-slate-800 rounded-3xl transition-all duration-500 hover:border-cyan-400/30">
+                    <div class="aspect-video relative overflow-hidden bg-slate-900">
+                        <img src="image/teacher-pro.png" class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-1000 grayscale group-hover:grayscale-0" alt="Teacher.Pro" onerror="this.onerror=null;this.src='https://placehold.co/600x400/020617/00a2ed?text=Teacher.Pro';">
+                    </div>
+                    <div class="p-10">
+                        <h4 class="text-white text-3xl font-extrabold mb-4 uppercase">Teacher.Pro</h4>
+                        <p class="text-slate-400 text-sm mb-8 leading-relaxed font-light">Inovativna obrazovna platforma. Složena sučelja prilagođena za lako učenje.</p>
+                        <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest">Projekt br. 2</span>
+                    </div>
+                </a>
+
+                <!-- Case 3: Dental Pro -->
+                <a href="https://dentalpro.kesug.com" target="_blank" rel="noopener noreferrer" class="content-block group overflow-hidden block bg-slate-900/40 border border-slate-800 rounded-3xl transition-all duration-500 hover:border-cyan-400/30">
+                    <div class="aspect-video relative overflow-hidden bg-slate-900">
+                        <img src="image/ivanov-dental.png" class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-1000 grayscale group-hover:grayscale-0" alt="Dental Pro" onerror="this.onerror=null;this.src='https://placehold.co/600x400/020617/00a2ed?text=Dental+Pro';">
+                    </div>
+                    <div class="p-10">
+                        <h4 class="text-white text-3xl font-extrabold mb-4 uppercase">Dental Pro</h4>
+                        <p class="text-slate-400 text-sm mb-8 leading-relaxed font-light">Digitalno rješenje za modernu stomatologiju. Čisto, pouzdano i tehnološko sučelje.</p>
+                        <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest">Projekt br. 3</span>
+                    </div>
+                </a>
+
+                <!-- Case 4: Arhitektura Sigurnosti -->
+                <a href="https://sigurnost.kesug.com" target="_blank" rel="noopener noreferrer" class="content-block group overflow-hidden block bg-slate-900/40 border border-slate-800 rounded-3xl transition-all duration-500 hover:border-cyan-400/30">
+                    <div class="aspect-video relative overflow-hidden bg-slate-900">
+                        <img src="image/legal-engineering.png" class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-1000 grayscale group-hover:grayscale-0" alt="Arhitektura Sigurnosti" onerror="this.onerror=null;this.src='https://placehold.co/600x400/020617/00a2ed?text=Arhitektura+Sigurnosti';">
+                    </div>
+                    <div class="p-10">
+                        <h4 class="text-white text-3xl font-extrabold mb-4 uppercase">Arhitektura Sigurnosti</h4>
+                        <p class="text-slate-400 text-sm mb-8 leading-relaxed font-light">Globalni pravni inženjering. Strog i profesionalan stil za arhitekturu sigurnosti.</p>
+                        <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest">Projekt br. 4</span>
+                    </div>
+                </a>
+
+                <!-- Case 5: Super Smart Servis -->
+                <a href="https://supersmartservis.wuaze.com" target="_blank" rel="noopener noreferrer" class="content-block group overflow-hidden block bg-slate-900/40 border border-slate-800 rounded-3xl transition-all duration-500 hover:border-cyan-400/30">
+                    <div class="aspect-video relative overflow-hidden bg-slate-900">
+                        <img src="image/supersmartservis.png" class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-1000 grayscale group-hover:grayscale-0" alt="Super Smart Servis" onerror="this.onerror=null;this.src='https://placehold.co/600x400/020617/00a2ed?text=Super+Smart+Servis';">
+                    </div>
+                    <div class="p-10">
+                        <h4 class="text-white text-3xl font-extrabold mb-4 uppercase">Super Smart Servis</h4>
+                        <p class="text-slate-400 text-sm mb-8 leading-relaxed font-light">Najmoćniji servis za popravak u Dugom Selu. Dinamičan dizajn za brzo rješavanje problema s tehnikom.</p>
+                        <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest">Projekt br. 5</span>
+                    </div>
+                </a>
+
+                <!-- Case 6: Monkey Gym -->
+                <a href="https://monkeygym.kesug.com" target="_blank" rel="noopener noreferrer" class="content-block group overflow-hidden block bg-slate-900/40 border border-slate-800 rounded-3xl transition-all duration-500 hover:border-cyan-400/30">
+                    <div class="aspect-video relative overflow-hidden bg-slate-900">
+                        <img src="image/monkeygym.png" class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-1000 grayscale group-hover:grayscale-0" alt="Monkey Gym" onerror="this.onerror=null;this.src='https://placehold.co/600x400/020617/00a2ed?text=Monkey+Gym';">
+                    </div>
+                    <div class="p-10">
+                        <h4 class="text-white text-3xl font-extrabold mb-4 uppercase">Monkey Gym</h4>
+                        <p class="text-slate-400 text-sm mb-8 leading-relaxed font-light">Energičan i agresivan dizajn za teretanu. Metodologija koja otkriva pravi potencijal.</p>
+                        <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest">Projekt br. 6</span>
+                    </div>
+                </a>
+
+                <!-- Case 7: Mala Kuhinja -->
+                <a href="https://malakuhinja.hr" target="_blank" rel="noopener noreferrer" class="content-block group overflow-hidden block bg-slate-900/40 border border-slate-800 rounded-3xl transition-all duration-500 hover:border-cyan-400/30">
+                    <div class="aspect-video relative overflow-hidden bg-slate-900">
+                        <img src="image/mala_kuhinja.png" class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-1000 grayscale group-hover:grayscale-0" alt="Mala Kuhinja Dugo Selo" onerror="this.onerror=null;this.src='https://placehold.co/600x400/020617/00a2ed?text=Mala+Kuhinja';">
+                    </div>
+                    <div class="p-10">
+                        <h4 class="text-white text-3xl font-extrabold mb-4 uppercase">Mala Kuhinja</h4>
+                        <p class="text-slate-400 text-sm mb-8 leading-relaxed font-light">Autentični bistro & grill cafe u Dugom Selu. Moderan web dizajn s fokusom na gastronomsku ponudu i ugodan ambijent.</p>
+                        <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest">Projekt br. 7</span>
+                    </div>
+                </a>
+
+                <!-- Case 8: Ovdje može biti vaš projekt -->
+                <a href="#" class="content-block group overflow-hidden block bg-slate-900/40 border border-slate-800 rounded-3xl transition-all duration-500 hover:border-cyan-400/30">
+                    <div class="aspect-video relative overflow-hidden bg-slate-900">
+                        <img src="https://placehold.co/600x400/020617/00a2ed?text=Projekt+8" class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-1000 grayscale group-hover:grayscale-0" alt="Ovdje može biti vaš projekt">
+                    </div>
+                    <div class="p-10">
+                        <h4 class="text-white text-3xl font-extrabold mb-4 uppercase">Ovdje može biti vaš projekt</h4>
+                        <p class="text-slate-400 text-sm mb-8 leading-relaxed font-light">Ovdje možete unijeti detaljan opis vašeg rada, ciljeva i vizualnih rješenja za ovaj projekt.</p>
+                        <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest">Projekt br. 8</span>
+                    </div>
+                </a>
+
+                <!-- Case 9: Ovdje može biti vaš projekt -->
+                <a href="#" class="content-block group overflow-hidden block bg-slate-900/40 border border-slate-800 rounded-3xl transition-all duration-500 hover:border-cyan-400/30">
+                    <div class="aspect-video relative overflow-hidden bg-slate-900">
+                        <img src="https://placehold.co/600x400/020617/f472b6?text=Projekt+9" class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-1000 grayscale group-hover:grayscale-0" alt="Ovdje može biti vaš projekt">
+                    </div>
+                    <div class="p-10">
+                        <h4 class="text-white text-3xl font-extrabold mb-4 uppercase">Ovdje može biti vaš projekt</h4>
+                        <p class="text-slate-400 text-sm mb-8 leading-relaxed font-light">Ovdje možete unijeti detaljan opis vašeg rada, ciljeva i vizualnih rješenja za ovaj projekt.</p>
+                        <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest">Projekt br. 9</span>
+                    </div>
+                </a>
+
+                <!-- Case 10: Ovdje može biti vaš projekt -->
+                <a href="#" class="content-block group overflow-hidden block bg-slate-900/40 border border-slate-800 rounded-3xl transition-all duration-500 hover:border-cyan-400/30">
+                    <div class="aspect-video relative overflow-hidden bg-slate-900">
+                        <img src="https://placehold.co/600x400/020617/4ade80?text=Projekt+10" class="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition duration-1000 grayscale group-hover:grayscale-0" alt="Ovdje može biti vaš projekt">
+                    </div>
+                    <div class="p-10">
+                        <h4 class="text-white text-3xl font-extrabold mb-4 uppercase">Ovdje može biti vaš projekt</h4>
+                        <p class="text-slate-400 text-sm mb-8 leading-relaxed font-light">Ovdje možete unijeti detaljan opis vašeg rada, ciljeva i vizualnih rješenja za ovaj projekt.</p>
+                        <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest">Projekt br. 10</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section 01 -->
+    <section id="services" class="py-24 lg:py-32 px-4 relative bg-black text-white">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-10 uppercase tracking-tight" id="s_title_el">ŠTO <span class="text-green-400 underline decoration-2 underline-offset-8">ZNAM</span></h2>
+                <div class="space-y-6">
+                    <div class="group glass p-8 rounded-3xl border-l-8 border-cyan-400 hover:bg-cyan-400/10 transition cursor-help">
+                        <h4 class="text-2xl font-black mb-2 flex items-center gap-4">
+                            <span class="p-3 bg-cyan-400 text-black rounded-xl text-sm italic">UI</span> UX & PRODUCT DESIGN
+                        </h4>
+                        <p class="text-gray-400">Od koncepta do prototipa. Stvaram korisnička sučelja koja se sama prodaju.</p>
+                    </div>
+                    <div class="group glass p-8 rounded-3xl border-l-8 border-fuchsia-400 hover:bg-fuchsia-400/10 transition cursor-help">
+                        <h4 class="text-2xl font-black mb-2 flex items-center gap-4">
+                            <span class="p-3 bg-fuchsia-400 text-black rounded-xl text-sm italic">WEB</span> DESIGN
+                        </h4>
+                        <p class="text-gray-400">Brzi razvoj bez ograničenja u dizajnu. Čist kod, savršene animacije.</p>
+                    </div>
+                    <div class="group glass p-8 rounded-3xl border-l-8 border-green-400 hover:bg-green-400/10 transition cursor-help">
+                        <h4 class="text-2xl font-black mb-2 flex items-center gap-4">
+                            <span class="p-3 bg-green-400 text-black rounded-xl text-sm italic">AID</span> BRANDING & IDENTITY
+                        </h4>
+                        <p class="text-gray-400">Logotipi, smjernice i cjelovita vizualna komunikacijska strategija vašeg brenda.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-6 items-center">
+                 <div class="glass p-10 rounded-full aspect-square flex flex-col items-center justify-center border-dashed border-2 border-white/20 animate-spin-slow">
+                    <p class="text-4xl font-black gradient-text">360°</p>
+                    <p class="text-[10px] uppercase tracking-widest text-gray-500">Usluge</p>
+                 </div>
+                 <div class="space-y-6">
+                    <div class="glass p-6 rounded-2xl border-t border-white/10 card-green text-center">
+                        <i class="fas fa-microchip text-3xl text-green-400 mb-4"></i>
+                        <h5 class="font-black italic">INTEGRACIJA AI-ja</h5>
+                    </div>
+                    <div class="glass p-6 rounded-2xl border-t border-white/10 card-cyan text-center">
+                        <i class="fas fa-layer-group text-3xl text-cyan-400 mb-4"></i>
+                        <h5 class="font-black italic">MODULARNI UI</h5>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section 02 -->
+    <section id="services-offer" class="py-24 lg:py-32 px-6 bg-black text-white border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-center mb-20 uppercase tracking-tight">
+                <span class="text-cyan-400 mr-4">.</span><span>Što mogu ponuditi</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="content-block border-blue p-10 group">
+                    <div class="w-20 h-20 bg-cyan-500/5 rounded-2xl flex items-center justify-center text-cyan-400 text-4xl mb-10 group-hover:bg-cyan-400 group-hover:text-slate-900 transition-all duration-500">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-2xl mb-6">Dizajn Landing stranica</h3>
+                    <p class="text-slate-400 text-base leading-relaxed font-light">Stvaram prekrasne jednostrane i višestrane web stranice koje oduševljavaju na prvi pogled.</p>
+                </div>
+                <div class="content-block border-pink p-10 group">
+                    <div class="w-20 h-20 bg-fuchsia-500/5 rounded-2xl flex items-center justify-center text-fuchsia-400 text-4xl mb-10 group-hover:bg-fuchsia-400 group-hover:text-slate-900 transition-all duration-500">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-2xl mb-6">Vizualni stil</h3>
+                    <p class="text-slate-400 text-base leading-relaxed font-light">Odabir boja, fontova i elemenata koji stvaraju idealnu atmosferu za vaš brend.</p>
+                </div>
+                <div class="content-block border-green p-10 group">
+                    <div class="w-20 h-20 bg-green-500/5 rounded-2xl flex items-center justify-center text-green-400 text-4xl mb-10 group-hover:bg-green-400 group-hover:text-slate-900 transition-all duration-500">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-2xl mb-6">Mobilna adaptacija</h3>
+                    <p class="text-slate-400 text-base leading-relaxed font-light">Osiguravam da vaša web stranica izgleda savršeno kako na računalnom monitoru, tako i na zaslonu pametnog telefona.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid Cards -->
+    <section id="services-grid" class="py-16 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 glass hover-scale border-blue rounded-3xl flex flex-col items-start group">
+                    <div class="service-icon mb-4"><i class="fas fa-bezier-curve text-3xl text-blue-400"></i></div>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-blue-400 transition-colors">Grafički dizajn</h3>
+                    <p class="service-card-text leading-relaxed text-slate-400">Izrada jedinstvenih logotipa i cjelovitog vizualnog identiteta vašeg brenda.</p>
+                </div>
+                <div class="p-8 glass hover-scale border-pink rounded-3xl flex flex-col items-start group">
+                    <div class="service-icon mb-4"><i class="fas fa-desktop text-3xl text-pink-400"></i></div>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-pink-400 transition-colors">Web dizajn</h3>
+                    <p class="service-card-text leading-relaxed text-slate-400">Moderna, responzivna i jednostavna korisnička sučelja za vaš digitalni uspjeh.</p>
+                </div>
+                <div class="p-8 glass hover-scale border-green rounded-3xl flex flex-col items-start group">
+                    <div class="service-icon mb-4"><i class="fas fa-rocket text-3xl text-green-400"></i></div>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-green-400 transition-colors">Kreativa</h3>
+                    <p class="service-card-text leading-relaxed text-slate-400">Nestandardna i inovativna rješenja za rješavanje složenih vizualnih zadataka.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-24 lg:py-32 px-4 bg-gradient-to-b from-transparent to-black/50">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-4 uppercase tracking-tight" id="m_title_el">ALGORITAM <span class="text-blue-500">USPJEHA</span></h2>
+            <p class="text-gray-500 uppercase tracking-[0.5em] text-xs">Moj radni proces</p>
+        </div>
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
+            <div class="group p-1 glass rounded-[40px] hover:bg-gradient-to-br from-cyan-500 to-blue-600 transition duration-500 hover:scale-105">
+                <div class="bg-slate-950 h-full w-full rounded-[38px] p-10 flex flex-col items-center text-center">
+                    <span class="w-16 h-16 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-2xl font-black mb-6 group-hover:bg-white group-hover:text-cyan-500 transition">1</span>
+                    <h4 class="text-xl font-black mb-4 uppercase">BRIFING</h4>
+                    <p class="text-xs text-gray-500">Slušam vas, proučavam poslovne ciljeve i postavljam jasne te konkretne zadatke.</p>
+                </div>
+            </div>
+            <div class="group p-1 glass rounded-[40px] hover:bg-gradient-to-br from-fuchsia-500 to-purple-600 transition duration-500 hover:scale-105">
+                <div class="bg-slate-950 h-full w-full rounded-[38px] p-10 flex flex-col items-center text-center">
+                    <span class="w-16 h-16 rounded-full bg-fuchsia-500/20 text-fuchsia-400 flex items-center justify-center text-2xl font-black mb-6 group-hover:bg-white group-hover:text-fuchsia-500 transition">2</span>
+                    <h4 class="text-xl font-black mb-4 uppercase">KONCEPT</h4>
+                    <p class="text-xs text-gray-500">Razvijam 2-3 vizualna smjera i kreiram UX prototip za testiranje strukture.</p>
+                </div>
+            </div>
+            <div class="group p-1 glass rounded-[40px] hover:bg-gradient-to-br from-orange-500 to-red-600 transition duration-500 hover:scale-105">
+                <div class="bg-slate-950 h-full w-full rounded-[38px] p-10 flex flex-col items-center text-center">
+                    <span class="w-16 h-16 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-2xl font-black mb-6 group-hover:bg-white group-hover:text-orange-500 transition">3</span>
+                    <h4 class="text-xl font-black mb-4 uppercase">DETALJI</h4>
+                    <p class="text-xs text-gray-500">Crtam sve stranice u punom sjaju, pripremam responzivne verzije i animacije.</p>
+                </div>
+            </div>
+            <div class="group p-1 glass rounded-[40px] hover:bg-gradient-to-br from-green-500 to-emerald-600 transition duration-500 hover:scale-105">
+                <div class="bg-slate-950 h-full w-full rounded-[38px] p-10 flex flex-col items-center text-center">
+                    <span class="w-16 h-16 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center text-2xl font-black mb-6 group-hover:bg-white group-hover:text-green-500 transition">4</span>
+                    <h4 class="text-xl font-black mb-4 uppercase">FINALE</h4>
+                    <p class="text-xs text-gray-500">Pokrećemo web stranicu, temeljito testiramo brzinu rada i obučavamo vas za rad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 lg:py-32 px-4 relative overflow-hidden bg-black text-white">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-600/10 blur-[120px] rounded-full -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 relative z-10">
+            <div>
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-10 leading-none uppercase tracking-tight">
+                    <span>HAJDEMO</span> <br>
+                    <span class="text-red-500">ZAPALITI</span> <br>
+                    <span>OVAJ WEB!</span>
+                </h2>
+                <p class="text-gray-400 text-xl mb-12">Vaša ideja zaslužuje vrhunsko i upečatljivo utjelovljenje. Pišite mi i raspravit ćemo sve detalje već danas.</p>
+                
+                <div class="grid sm:grid-cols-3 gap-6">
+                    <a href="mailto:mikedesignua@gmail.com" class="relative z-30 p-6 glass rounded-3xl border border-white/10 hover:border-red-500 transition-all duration-300 group hover-scale block cursor-pointer">
+                        <i class="fas fa-paper-plane text-2xl text-red-500 mb-4 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform"></i>
+                        <h5 class="font-bold text-base uppercase">Email</h5>
+                        <p class="text-xs text-gray-500 truncate">mikedesignua@gmail.com</p>
+                    </a>
+                    <a href="https://wa.me/380673626012" target="_blank" rel="noopener noreferrer" class="relative z-30 p-6 glass rounded-3xl border border-white/10 hover:border-[#25D366] transition-all duration-300 group hover-scale block cursor-pointer">
+                        <i class="fab fa-whatsapp text-2xl text-[#25D366] mb-4 group-hover:scale-125 transition-transform"></i>
+                        <h5 class="font-bold text-base uppercase">WhatsApp</h5>
+                        <p class="text-xs text-gray-500">+380 67 362 6012</p>
+                    </a>
+                    <a href="https://t.me/mastnet" target="_blank" rel="noopener noreferrer" class="relative z-30 p-6 glass rounded-3xl border border-white/10 hover:border-blue-400 transition-all duration-300 group hover-scale block cursor-pointer">
+                        <i class="fab fa-telegram-plane text-2xl text-blue-400 mb-4 group-hover:scale-125 transition-transform"></i>
+                        <h5 class="font-bold text-base uppercase">Telegram</h5>
+                        <p class="text-xs text-gray-500">@mastnet</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative z-10">
+                <div class="glass p-8 sm:p-10 rounded-[40px] sm:rounded-[50px] border border-white/10 shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-red-500/20 blur-3xl -z-10"></div>
+                    
+                    <form id="whatsapp-contact-form" class="space-y-5 relative z-10">
+                        <div class="space-y-4">
+                            <div>
+                                <input type="text" id="wa-full-name" name="full_name" required class="w-full bg-white/5 border border-white/20 rounded-2xl px-6 py-4 hover:border-red-500 hover:shadow-[0_0_15px_rgba(239,68,68,0.3)] focus:bg-white/10 focus:border-red-500 focus:shadow-[0_0_20px_rgba(239,68,68,0.5)] transition-all duration-300 outline-none text-white placeholder-gray-400" placeholder="Ime i prezime">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <input type="tel" id="wa-phone" name="phone" required class="w-full bg-white/5 border border-white/20 rounded-2xl px-6 py-4 hover:border-red-500 hover:shadow-[0_0_15px_rgba(239,68,68,0.3)] focus:bg-white/10 focus:border-red-500 focus:shadow-[0_0_20px_rgba(239,68,68,0.5)] transition-all duration-300 outline-none text-white placeholder-gray-400" placeholder="Broj telefona (+385...)">
+                                <input type="email" id="wa-email" name="email" required class="w-full bg-white/5 border border-white/20 rounded-2xl px-6 py-4 hover:border-red-500 hover:shadow-[0_0_15px_rgba(239,68,68,0.3)] focus:bg-white/10 focus:border-red-500 focus:shadow-[0_0_20px_rgba(239,68,68,0.5)] transition-all duration-300 outline-none text-white placeholder-gray-400" placeholder="Email za kontakt">
+                            </div>
+                            
+                            <textarea id="wa-message" name="message" rows="4" required class="w-full bg-white/5 border border-white/20 rounded-2xl px-6 py-4 hover:border-red-500 hover:shadow-[0_0_15px_rgba(239,68,68,0.3)] focus:bg-white/10 focus:border-red-500 focus:shadow-[0_0_20px_rgba(239,68,68,0.5)] transition-all duration-300 outline-none text-white placeholder-gray-400" placeholder="Recite mi nešto više o svom projektu..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full py-5 bg-[#25D366] text-white font-black rounded-2xl hover:bg-[#ef4444] hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(239,68,68,0.6)] transition-all duration-300 uppercase tracking-widest shadow-[0_0_15px_rgba(37,211,102,0.3)] active:scale-95 cursor-pointer flex flex-col sm:flex-row items-center justify-center text-center gap-2 sm:gap-3">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                            <span class="text-sm sm:text-base leading-tight">POŠALJI ISKRU U WHATSAPP</span>
+                        </button>
+                    </form>
+
+                    <script>
+                        document.getElementById('whatsapp-contact-form').addEventListener('submit', function(e) {
+                            e.preventDefault();
+                            const fullName = document.getElementById('wa-full-name').value;
+                            const phone = document.getElementById('wa-phone').value;
+                            const email = document.getElementById('wa-email').value;
+                            const message = document.getElementById('wa-message').value;
+                            
+                            const text = `Pozdrav! Nova poruka s web stranice:\n\n*Ime i prezime:* ${fullName}\n*Telefon:* ${phone}\n*Email:* ${email}\n*Poruka:* ${message}`;
+                            const encodedText = encodeURIComponent(text);
+                            const phoneNumber = "380673626012";
+                            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+                            window.open(whatsappURL, '_blank');
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer Section -->
+    <footer class="pt-16 pb-12 px-4 bg-black border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 mb-12">
+                <div class="col-span-2">
+                    <!-- Identical Logo Component (Footer) -->
+                    <a href="#home" class="logo-component flex items-center gap-3 mb-8">
+                        <div class="logo-icon-wrapper">
+                            <div class="logo-border"></div>
+                            <div class="letter-container">
+                                <span class="char-m">M</span>
+                                <span class="char-k">K</span>
+                            </div>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-name">Mike</span>
+                            <span class="logo-subtext">Design</span>
+                        </div>
+                    </a>
+
+                    <p class="text-gray-500 max-w-sm mb-8 leading-relaxed">
+                        Ne gradim samo piksele, ja gradim budućnost. Pridružite se mom digitalnom putovanju.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://wa.me/380673626012" class="w-12 h-12 glass rounded-2xl flex items-center justify-center si-whatsapp social-icon text-[#25D366]"><i class="fab fa-whatsapp text-xl"></i></a>
+                        <a href="viber://chat?number=%2B380673626012" class="w-12 h-12 glass rounded-2xl flex items-center justify-center si-viber social-icon text-[#7360f2]"><i class="fab fa-viber text-xl"></i></a>
+                        <a href="https://t.me/mastnet" class="w-12 h-12 glass rounded-2xl flex items-center justify-center si-telegram social-icon text-[#0088cc]"><i class="fab fa-telegram-plane text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-span-1">
+                    <h5 class="font-black uppercase tracking-widest mb-6 text-sm text-cyan-400">Navigacija</h5>
+                    <ul class="space-y-4 text-gray-500 text-sm">
+                        <li><a href="#home" class="hover:text-white transition">Početna</a></li>
+                        <li><a href="#about" class="hover:text-white transition">O meni</a></li>
+                        <li><a href="#portfolio" class="hover:text-white transition">Portfolio</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Usluge</a></li>
+                        <li><a href="#process" class="hover:text-white transition">Proces</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-span-1">
+                    <h5 class="font-black uppercase tracking-widest mb-6 text-sm text-fuchsia-400">Usluge</h5>
+                    <ul class="space-y-4 text-gray-500 text-sm">
+                        <li><a href="#services" class="hover:text-white transition">UI/UX Design</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Webflow Dev</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Branding</a></li>
+                        <li><a href="#services" class="hover:text-white transition">SEO Optimization</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-span-2">
+                    <h5 class="font-black uppercase tracking-widest mb-6 text-sm text-green-400">Kontakti</h5>
+                    <ul class="space-y-4 text-gray-500 text-sm">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-xs"></i> 
+                            <a href="mailto:mikedesignua@gmail.com" class="hover:text-white transition">mikedesignua@gmail.com</a>
+                        </li>
+                        <li class="flex items-center gap-3"><i class="fab fa-telegram text-xs"></i> @mastnet</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-location-arrow text-xs"></i> Ukraine, Croatia</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-[10px] text-gray-600 font-black uppercase tracking-[0.3em]">&copy; 2026 MIKE DESIGN STUDIO. SVA PRAVA PRIDRŽANA.</p>
+                <div class="flex gap-6 text-[10px] font-black text-gray-600 uppercase tracking-widest">
+                    <a href="#" class="hover:text-white transition">Pravila o privatnosti</a>
+                    <a href="#" class="hover:text-white transition">Uvjeti pružanja usluge</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/scriptmain.js"></script>
+    <script src="scripts/security.js"></script>
+</body>
+</html>
